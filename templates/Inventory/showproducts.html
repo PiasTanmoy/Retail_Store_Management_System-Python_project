@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+
+<h2>All products in here</h2>
+
+{% for item in all_products %}
+    <p>
+    Products Name: {{ item.title }}<br>
+    Brand: {{ item.brand }}<br>
+    Price: {{ item.price }}<span> Tk/=</span>
+    </p>
+
+{% endfor %}
+
+</body>
+</html>

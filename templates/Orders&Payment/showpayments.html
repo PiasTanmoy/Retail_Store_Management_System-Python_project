@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payments</title>
+</head>
+<body>
+
+<h2>All Payments information in here</h2>
+
+{% for info in all_Payments %}
+    <p>
+    Invoice Number: {{ info.Invoice_num}}<br>
+    Payment Date: {{ info.payment_date }}<br>
+    Total Amount: {{ info.Amount }}<span> Tk/=</span>
+    </p>
+
+{% endfor %}
+
+</body>
+</html>

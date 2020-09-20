@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+<h2>All Orders information in here</h2>
+
+{% for info in all_Orders %}
+    <p>
+    Order Status: {{ info.Order_status }}<br>
+    Order Date: {{ info.Order_date }}<br>
+    Require Date: {{ info.Require_date }}<br>
+    Shipped Date: {{ info.Shipped_date }}
+    </p>
+
+{% endfor %}
+
+</body>
+</html>
