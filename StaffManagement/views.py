@@ -1,22 +1,26 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-
+from .forms import StaffCreateForm
 
 # Create your views here.
-
 def registrationStaff(request):
-    form = UserCreationForm()
 
-    if request.method == 'post':
-        form = UserCreationForm(request.post)
-        if form.is_valid():
-            form.save()
+    form_obj = StaffCreateForm()
 
-    context = {
-        'form': form
+    if request.method == "POST":
+
+        form_obj = StaffCreateForm(request.POST)
+
+        if form_obj.is_valid():
+            form_obj.save()
+            form_obj = StaffCreateForm()
+
+
+    context ={
+
+        "reg_form": form_obj
+
     }
-
-    return render(request, "StaffManagement/registration.html", context)
+    return render(request, 'StaffManagement/registration.html', context)
 
 
 
