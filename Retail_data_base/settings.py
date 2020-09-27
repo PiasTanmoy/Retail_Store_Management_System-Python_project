@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'CustomerManagement.apps.CustomerManagementConfig',
     'OrdersAndPayment.apps.OrdersandpaymentConfig',
     'StaffManagement.apps.StaffManagementConfig',
+    'Profile.apps.ProfileConfig',
 ]
 
 MIDDLEWARE = [

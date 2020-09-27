@@ -22,6 +22,7 @@ from OrdersAndPayment import views as paymentsviews
 from OrdersAndPayment import views as ordersviews
 from OrdersAndPayment import views as orderdetailsviews
 from StaffManagement import views as staffmanagementviews
+from Profile import views as usrregviews
 
 
 urlpatterns = [
@@ -32,6 +33,7 @@ urlpatterns = [
     path('orders/', ordersviews.showOrders),
     path('orderdetails/', orderdetailsviews.showOrderDetails),
     path('StaffRegistration/',staffmanagementviews.registrationStaff),
+    path('userregistration/',usrregviews.Userregistration),
     path('accounts/',include('django.contrib.auth.urls'))
 
 
