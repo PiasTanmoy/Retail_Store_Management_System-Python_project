@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'InventoryManagement.apps.InventoryManagementConfig',
     'CustomerManagement.apps.CustomerManagementConfig',
     'OrdersAndPayment.apps.OrdersandpaymentConfig',
-    'StaffManagement.apps.StaffmanagementConfig',
+    'StaffManagement.apps.StaffManagementConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = 'orderdetails/'
+LOGOUT_REDIRECT_URL ='login'
