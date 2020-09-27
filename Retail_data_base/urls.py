@@ -23,6 +23,7 @@ from OrdersAndPayment import views as ordersviews
 from OrdersAndPayment import views as orderdetailsviews
 from StaffManagement import views as staffmanagementviews
 from Profile import views as usrregviews
+from CustomerManagement import views as cus_insert
 
 
 urlpatterns = [
@@ -34,7 +35,8 @@ urlpatterns = [
     path('orderdetails/', orderdetailsviews.showOrderDetails),
     path('StaffRegistration/',staffmanagementviews.registrationStaff),
     path('userregistration/',usrregviews.Userregistration),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('InsertCustomer/',cus_insert.InsertCustomer)
 
 
 ]
